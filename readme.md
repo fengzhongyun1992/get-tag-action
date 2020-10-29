@@ -47,9 +47,9 @@ jobs:
 
         with:
           tag_name: ${{ github.ref }}
-          release_name: doorer ${{ github.ref }}
+          release_name: app ${{ github.ref }}
           body: |
-            app. ${{ ${{steps.get_tag_action.outputs.vtag}}}}发布
+            app.  ${{steps.get_tag_action.outputs.vtag}}发布
           draft: false
           prerelease: false
 ```
