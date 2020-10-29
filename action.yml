@@ -12,4 +12,4 @@ outputs:
     description: '输出tag, 如：v1.2.0 ，v1.2.1'
 runs:
   using: 'node12'
-  main: 'index.js'
+  main: 'dist/index.js'

@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    -name: Get Tag Action
+    - name: Get Tag Action
       id: get_tag_action
       uses: fengzhongyun1992/get-tag-action@v1
       with:
@@ -49,7 +49,7 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: app ${{ github.ref }}
           body: |
-            app.  ${{steps.get_tag_action.outputs.vtag}}发布
+            app.  ${{ steps.get_tag_action.outputs.vtag }}发布
           draft: false
           prerelease: false
 ```
