@@ -1,0 +1,15 @@
+name: "Get Tag"
+description: "获取 Tag版本号"
+
+inputs:
+  tag_name:
+    description: 'The name of the tag. This should come from the webhook payload, `github.GITHUB_REF` when a user pushes a new tag'
+    required: true
+outputs:
+  tag:
+    description: '输出tag, 如：1.2.0 ，1.2.1'
+  vtag:
+    description: '输出tag, 如：v1.2.0 ，v1.2.1'
+runs:
+  using: 'node12'
+  main: 'index.js'
